@@ -1,14 +1,13 @@
 plugin:
     name: 'dmitrybykov.swiper::lang.plugin.name'
-    description: 'dmitrybykov.swiper::lang.plugin.description'
+    description: 'Most Modern Mobile Touch Slider'
     author: CRYDEsigN
     icon: oc-icon-sliders
     homepage: ''
-
 navigation:
     swiper:
         label: 'dmitrybykov.swiper::lang.plugin.name'
         url: dmitrybykov/swiper/news
-        icon: plugins/dmitrybykov/swiper/assets/images/logo.png
+        icon: icon-sliders
         iconSvg: plugins/dmitrybykov/swiper/assets/images/logo.png
         order: 700
