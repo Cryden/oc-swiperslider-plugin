@@ -1,0 +1,14 @@
+plugin:
+    name: 'dmitrybykov.swiper::lang.plugin.name'
+    description: 'dmitrybykov.swiper::lang.plugin.description'
+    author: CRYDEsigN
+    icon: oc-icon-sliders
+    homepage: ''
+
+navigation:
+    swiper:
+        label: 'dmitrybykov.swiper::lang.plugin.name'
+        url: dmitrybykov/swiper/news
+        icon: plugins/dmitrybykov/swiper/assets/images/logo.png
+        iconSvg: plugins/dmitrybykov/swiper/assets/images/logo.png
+        order: 700
