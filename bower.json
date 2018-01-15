@@ -1,0 +1,20 @@
+{
+  "name": "swiperslider",
+  "homepage": "https://github.com/Cryden/oc-swiperslider-plugin",
+  "authors": [
+    "CRYDEsigN <Cryden_da@mail.ru>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "swiper": "^4.1.0"
+  }
+}
