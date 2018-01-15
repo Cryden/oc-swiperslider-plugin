@@ -1,0 +1,4 @@
+title: SliderPreset
+modelClass: dmitrybykov\Swiper\Models\SliderPreset
+toolbar:
+    buttons: reorder_toolbar

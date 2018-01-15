@@ -1,0 +1,7 @@
+fields:
+    name:
+        label: 'Preset Name'
+        span: full
+        oc.commentPosition: ''
+        disabled: 1
+        type: text

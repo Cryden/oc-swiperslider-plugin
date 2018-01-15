@@ -1,0 +1,10 @@
+name: SliderPreset
+form: $/dmitrybykov/swiper/models/sliderpreset/fields.yaml
+modelClass: dmitrybykov\Swiper\Models\SliderPreset
+defaultRedirect: dmitrybykov/swiper/sliderpreset
+create:
+    redirect: 'dmitrybykov/swiper/sliderpreset/update/:id'
+    redirectClose: dmitrybykov/swiper/sliderpreset
+update:
+    redirect: dmitrybykov/swiper/sliderpreset
+    redirectClose: dmitrybykov/swiper/sliderpreset

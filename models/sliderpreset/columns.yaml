@@ -1,0 +1,5 @@
+columns:
+    name:
+        label: 'Preset name'
+        type: text
+        sortable: true

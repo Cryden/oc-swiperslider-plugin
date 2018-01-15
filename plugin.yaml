@@ -7,7 +7,16 @@ plugin:
 navigation:
     swiper:
         label: 'dmitrybykov.swiper::lang.plugin.name'
-        url: dmitrybykov/swiper/news
-        icon: icon-sliders
+        url: dmitrybykov/swiper/slider
         iconSvg: plugins/dmitrybykov/swiper/assets/images/logo.png
+        icon: icon-sliders
         order: 700
+        sideMenu:
+            sliders:
+                label: Sliders
+                url: dmitrybykov/swiper/slider
+                icon: icon-photo
+            slider-presets:
+                label: Preset
+                url: dmitrybykov/swiper/sliderpreset
+                icon: icon-cogs

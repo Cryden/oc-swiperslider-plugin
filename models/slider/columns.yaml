@@ -1,0 +1,5 @@
+columns:
+    slider_name:
+        label: Slider
+        type: text
+        sortable: true

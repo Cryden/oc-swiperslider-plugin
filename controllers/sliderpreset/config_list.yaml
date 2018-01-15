@@ -1,0 +1,11 @@
+list: $/dmitrybykov/swiper/models/sliderpreset/columns.yaml
+modelClass: dmitrybykov\Swiper\Models\SliderPreset
+title: SliderPreset
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'dmitrybykov/swiper/sliderpreset/update/:id'

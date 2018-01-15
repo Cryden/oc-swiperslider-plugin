@@ -1,0 +1,10 @@
+name: Slider
+form: $/dmitrybykov/swiper/models/slider/fields.yaml
+modelClass: dmitrybykov\Swiper\Models\Slider
+defaultRedirect: dmitrybykov/swiper/slider
+create:
+    redirect: 'dmitrybykov/swiper/slider/update/:id'
+    redirectClose: dmitrybykov/swiper/slider
+update:
+    redirect: dmitrybykov/swiper/slider
+    redirectClose: dmitrybykov/swiper/slider

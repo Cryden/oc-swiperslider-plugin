@@ -1,0 +1,16 @@
+fields:
+    slider_name:
+        label: 'Slider name'
+        span: full
+        oc.commentPosition: ''
+        type: text
+    images:
+        label: 'File upload'
+        span: auto
+        oc.commentPosition: ''
+        mode: file
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        type: fileupload
