@@ -1,6 +1,6 @@
 <?php namespace dmitrybykov\Swiper\Components;
 
-class BlogPosts extends \Cms\Classes\ComponentBase
+class swiperSlider extends \Cms\Classes\ComponentBase
 {
     public function componentDetails()
     {
@@ -9,5 +9,11 @@ class BlogPosts extends \Cms\Classes\ComponentBase
             'description' => 'Displays a Swiper slider.'
         ];
     }
-    
+
+    public function onRun()
+    {
+        $this->addCss('/plugins/dmitrybykov/Swiper/bower_components/swiper/dist/css/swiper.min.css');
+        $this->addJs('/plugins/dmitrybykov/Swiper/bower_components/swiper/dist/js/swiper.min.js');
+    }
+
 }
