@@ -9,3 +9,9 @@
 1.0.4:
     - 'Created table dmitrybykov_swiper_slider_presets'
     - builder_table_create_dmitrybykov_swiper_slider_presets.php
+1.0.5:
+    - 'Updated table dmitrybykov_swiper_slider_presets'
+    - builder_table_update_dmitrybykov_swiper_slider_presets.php
+1.0.6:
+    - 'Updated table dmitrybykov_swiper_slider_presets'
+    - builder_table_update_dmitrybykov_swiper_slider_presets_2.php

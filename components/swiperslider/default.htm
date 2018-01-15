@@ -1,7 +1,8 @@
 {% set slider = __SELF__.slider %}
 
+
 <!-- Slider main container -->
-<div class="swiper-container">
+<div class="swiper-container {{ __SELF__.id }}" >
     <!-- Additional required wrapper -->
 
     {% if slider.images %}
@@ -18,51 +19,35 @@
             {% endfor %}
         </div>
 
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-    
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-    
-        <!-- If we need scrollbar -->
-        <div class="swiper-scrollbar"></div>
+        {% if slider_preset.pagination %}
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        {% endif %}
+
+        {% if slider_preset.navigation %}
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        {% endif %}
+
+        {% if slider_preset.scrollbar %}
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        {% endif %}
 
     {% endif %}
 </div>
 
-{%put styles %}
-<style>
-    .swiper-container {
-        width: 100%;
-        height: 300px;
-        margin-bottom: 50px;
-    }
-</style>
+{% put styles %}
+    <style>
+        {{ slider_preset.css|raw}}
+    </style>
 {% endput %}
 
 {% put scripts %}
-    <script type="text/javascript">
-        var mySwiper = new Swiper ('.swiper-container', {
-            // Optional parameters
-            direction: 'horizontal',
-            loop: true,
-                
-            // If we need pagination
-            pagination: {
-                el: '.swiper-pagination',
-            },
-                
-            // Navigation arrows
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-                
-            // And if we need scrollbar
-            scrollbar: {
-                el: '.swiper-scrollbar',
-            },
-        })
-    </script>
+    <script>
+        var swiper = new Swiper('.{{ __SELF__.id }}', {
+            {{ slider_preset.js|raw }}
+        });
+    </script >
 {% endput %}

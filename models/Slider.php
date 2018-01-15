@@ -29,4 +29,5 @@ class Slider extends Model
     public $attachMany = [
         'images' => ['System\Models\File']
     ];
+
 }

@@ -1,7 +1,33 @@
 fields:
     name:
         label: 'Preset Name'
-        span: full
         oc.commentPosition: ''
-        disabled: 1
+        span: full
+        disabled: 0
         type: text
+    css:
+        label: 'CSS Code editor'
+        oc.commentPosition: ''
+        size: small
+        language: php
+        span: full
+        type: codeeditor
+    js:
+        label: 'JS Code editor'
+        oc.commentPosition: ''
+        size: small
+        language: php
+        span: full
+        type: codeeditor
+    pagination:
+        label: Pagination
+        span: full
+        type: checkbox
+    navigation:
+        label: Navigation
+        span: full
+        type: checkbox
+    scrollbar:
+        label: Scrollbar
+        span: full
+        type: checkbox

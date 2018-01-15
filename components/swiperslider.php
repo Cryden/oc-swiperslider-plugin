@@ -1,6 +1,7 @@
 <?php namespace dmitrybykov\Swiper\Components;
 
 use dmitrybykov\Swiper\models\Slider as Slider;
+use dmitrybykov\Swiper\models\SliderPreset as SliderPreset;
 
 class swiperSlider extends \Cms\Classes\ComponentBase
 {
@@ -19,6 +20,7 @@ class swiperSlider extends \Cms\Classes\ComponentBase
         $this->addCss('/plugins/dmitrybykov/Swiper/bower_components/swiper/dist/css/swiper.min.css');
         $this->addJs('/plugins/dmitrybykov/Swiper/bower_components/swiper/dist/js/swiper.min.js');
         $this->slider = $this->page['slider'] = $this->loadSlider();
+        $this->slider_preset = $this->page['slider_preset'] = $this->loadSliderPreset();
 
     }
 
@@ -26,6 +28,7 @@ class swiperSlider extends \Cms\Classes\ComponentBase
     public function onRender()
     {
         $this->slider = $this->page['slider'] = $this->loadSlider();
+        $this->slider_preset = $this->page['slider_preset'] = $this->loadSliderPreset();
     }
 
     protected function loadSlider()
@@ -36,12 +39,25 @@ class swiperSlider extends \Cms\Classes\ComponentBase
         return $slider;
     }
 
+    protected function loadSliderPreset()
+    {
+        $slider_preset_id = $this->property('preset');
+        $slider_preset = new SliderPreset;
+        $slider_preset = $slider_preset->where('id', $slider_preset_id)->first();
+        return $slider_preset;
+    }
+
     public function defineProperties()
     {
         return [
             'slider' => [
                 'title'       => 'slider',
                 'description' => 'select slider',
+                'type'        => 'dropdown'
+            ],
+            'preset' => [
+                'title'       => 'preset',
+                'description' => 'select preset',
                 'type'        => 'dropdown'
             ]
         ];
@@ -50,6 +66,11 @@ class swiperSlider extends \Cms\Classes\ComponentBase
     public function getSliderOptions()
     {
         return Slider::lists('slider_name', 'id');
+    }
+
+    public function getPresetOptions()
+    {
+        return SliderPreset::lists('name', 'id');
     }
 
 }
