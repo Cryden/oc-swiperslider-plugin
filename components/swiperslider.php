@@ -21,10 +21,8 @@ class swiperSlider extends \Cms\Classes\ComponentBase
         $this->addJs('/plugins/dmitrybykov/Swiper/bower_components/swiper/dist/js/swiper.min.js');
         $this->slider = $this->page['slider'] = $this->loadSlider();
         $this->slider_preset = $this->page['slider_preset'] = $this->loadSliderPreset();
-
     }
 
-    
     public function onRender()
     {
         $this->slider = $this->page['slider'] = $this->loadSlider();
